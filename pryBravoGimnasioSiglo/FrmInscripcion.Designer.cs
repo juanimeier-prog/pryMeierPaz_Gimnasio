@@ -55,11 +55,13 @@
             // 
             // grbDatosPersonales
             // 
+            grbDatosPersonales.BackColor = Color.RoyalBlue;
             grbDatosPersonales.Controls.Add(chkEstudiante);
             grbDatosPersonales.Controls.Add(txtEdad);
             grbDatosPersonales.Controls.Add(txtNombre);
             grbDatosPersonales.Controls.Add(lblEdad);
             grbDatosPersonales.Controls.Add(lblNombre);
+            grbDatosPersonales.ForeColor = SystemColors.ButtonFace;
             grbDatosPersonales.Location = new Point(25, 24);
             grbDatosPersonales.Name = "grbDatosPersonales";
             grbDatosPersonales.Size = new Size(213, 135);
@@ -79,13 +81,16 @@
             // 
             // txtEdad
             // 
+            txtEdad.BackColor = SystemColors.ButtonFace;
             txtEdad.Location = new Point(78, 56);
             txtEdad.Name = "txtEdad";
             txtEdad.Size = new Size(100, 23);
             txtEdad.TabIndex = 3;
+            txtEdad.KeyPress += txtEdad_KeyPress;
             // 
             // txtNombre
             // 
+            txtNombre.BackColor = SystemColors.ButtonFace;
             txtNombre.Location = new Point(78, 27);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(100, 23);
@@ -108,10 +113,10 @@
             lblNombre.Size = new Size(54, 15);
             lblNombre.TabIndex = 0;
             lblNombre.Text = "Nombre:";
-            lblNombre.Click += label1_Click;
             // 
             // grbPlan
             // 
+            grbPlan.BackColor = Color.RoyalBlue;
             grbPlan.Controls.Add(txtMes);
             grbPlan.Controls.Add(chkCasillero);
             grbPlan.Controls.Add(cmbTurno);
@@ -119,6 +124,7 @@
             grbPlan.Controls.Add(lblMes);
             grbPlan.Controls.Add(lblTurno);
             grbPlan.Controls.Add(lblPlan);
+            grbPlan.ForeColor = SystemColors.ButtonFace;
             grbPlan.Location = new Point(25, 165);
             grbPlan.Name = "grbPlan";
             grbPlan.Size = new Size(213, 150);
@@ -128,6 +134,7 @@
             // 
             // txtMes
             // 
+            txtMes.BackColor = SystemColors.ButtonFace;
             txtMes.Location = new Point(86, 89);
             txtMes.MaxLength = 2;
             txtMes.Name = "txtMes";
@@ -146,6 +153,7 @@
             // 
             // cmbTurno
             // 
+            cmbTurno.BackColor = SystemColors.ButtonFace;
             cmbTurno.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTurno.FormattingEnabled = true;
             cmbTurno.Items.AddRange(new object[] { "Mañana", "Tarde", "Noche" });
@@ -156,6 +164,7 @@
             // 
             // cmbPlan
             // 
+            cmbPlan.BackColor = SystemColors.ButtonFace;
             cmbPlan.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbPlan.FormattingEnabled = true;
             cmbPlan.Items.AddRange(new object[] { "Musculación", "Funcional", "Natación" });
@@ -193,9 +202,11 @@
             // 
             // gbxPago
             // 
+            gbxPago.BackColor = Color.RoyalBlue;
             gbxPago.Controls.Add(cboCuotas);
             gbxPago.Controls.Add(rbtTarjeta);
             gbxPago.Controls.Add(rbtEfectivo);
+            gbxPago.ForeColor = SystemColors.ButtonFace;
             gbxPago.Location = new Point(25, 321);
             gbxPago.Name = "gbxPago";
             gbxPago.Size = new Size(213, 107);
@@ -205,6 +216,7 @@
             // 
             // cboCuotas
             // 
+            cboCuotas.BackColor = SystemColors.ButtonFace;
             cboCuotas.DropDownStyle = ComboBoxStyle.DropDownList;
             cboCuotas.FormattingEnabled = true;
             cboCuotas.Items.AddRange(new object[] { "1", "3", "6" });
@@ -238,29 +250,36 @@
             // btnCalcular
             // 
             btnCalcular.AccessibleRole = AccessibleRole.TitleBar;
+            btnCalcular.BackColor = SystemColors.GradientInactiveCaption;
+            btnCalcular.ForeColor = SystemColors.ActiveCaptionText;
             btnCalcular.Location = new Point(47, 451);
             btnCalcular.Name = "btnCalcular";
             btnCalcular.Size = new Size(75, 23);
             btnCalcular.TabIndex = 3;
             btnCalcular.Text = "Calcular";
-            btnCalcular.UseVisualStyleBackColor = true;
+            btnCalcular.UseVisualStyleBackColor = false;
             btnCalcular.Click += btnCalcular_Click;
             // 
             // btnLimpiar
             // 
+            btnLimpiar.BackColor = SystemColors.GradientInactiveCaption;
+            btnLimpiar.ForeColor = SystemColors.ActiveCaptionText;
             btnLimpiar.Location = new Point(143, 451);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(75, 23);
             btnLimpiar.TabIndex = 4;
             btnLimpiar.Text = "Limpiar";
-            btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // FrmInscripcion
             // 
             AcceptButton = btnCalcular;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(270, 501);
+            BackgroundImage = Properties.Resources.images__1_;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(721, 501);
             Controls.Add(btnLimpiar);
             Controls.Add(btnCalcular);
             Controls.Add(gbxPago);
